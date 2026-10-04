@@ -54,9 +54,9 @@ Whether you are designing multi-cloud network architectures, securing AWS VPCs, 
 
 ## 🔓 Open-Source Firewall & Security Projects 🔓
 
-Sorted by star count (descending). Star badges link directly to each repository's stargazers page.
+Sorted by Stars_Count (descending). Stars_Badges link directly to each repository's stargazers page.
 
-| Repo | Description | Stars |
+| Repo | Description | GitHub_Stars |
 | :--- | :--- | :--- |
 | **[CrowdSec](https://github.com/crowdsecurity/crowdsec)** | Collaborative IPS/IDS with WAF engine. Analyzes behavior and leverages crowd intelligence to block attacks. | [![Stars](https://img.shields.io/github/stars/crowdsecurity/crowdsec?style=social&color=white)](https://github.com/crowdsecurity/crowdsec/stargazers) |
 | **[ModSecurity](https://github.com/owasp-modsecurity/ModSecurity)** | The legendary open-source Web Application Firewall (WAF) engine for HTTP traffic monitoring and filtering. | [![Stars](https://img.shields.io/github/stars/owasp-modsecurity/ModSecurity?style=social&color=white)](https://github.com/owasp-modsecurity/ModSecurity/stargazers) |
