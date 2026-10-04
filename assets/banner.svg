@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Animated Dynamic Background Lines/Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <line x1="0" y1="50" x2="1200" y2="50" />
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="250" x2="1200" y2="250" />
+    <line x1="200" y1="0" x2="200" y2="300" />
+    <line x1="400" y1="0" x2="400" y2="300" />
+    <line x1="600" y1="0" x2="600" y2="300" />
+    <line x1="800" y1="0" x2="800" y2="300" />
+    <line x1="1000" y1="0" x2="1000" y2="300" />
+  </g>
+
+  <!-- Dynamic Radar / Scanning Beam (Background Layer) -->
+  <g opacity="0.25">
+    <circle cx="1000" cy="150" r="120" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="1000" cy="150" r="80" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="1000" cy="150" r="40" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <line x1="1000" y1="30" x2="1000" y2="270" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+    <line x1="880" y1="150" x2="1120" y2="150" stroke="#38bdf8" stroke-width="1" opacity="0.4" />
+    <path d="M 1000 150 L 1115 110 A 120 120 0 0 0 1000 30 Z" fill="url(#shieldGrad)" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0 1000 150" to="360 1000 150" dur="8s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Floating Dynamic Defense Nodes (Background Layer) -->
+  <g filter="url(#glow)">
+    <!-- Node 1 -->
+    <circle cx="150" cy="80" r="6" fill="#38bdf8">
+      <animate attributeName="cy" values="80;70;80" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <!-- Node 2 -->
+    <circle cx="220" cy="220" r="8" fill="#818cf8">
+      <animate attributeName="cy" values="220;230;220" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <!-- Node 3 -->
+    <circle cx="1080" cy="230" r="5" fill="#38bdf8">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Dynamic Firewall Laser/Pulse Line -->
+  <rect x="0" y="294" width="1200" height="6" fill="url(#glowGrad)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- FOREGROUND TEXT & CONTENT (Ensured clear & visible above background elements) -->
+  <!-- Shield Icon -->
+  <g transform="translate(80, 85)" filter="url(#glow)">
+    <path d="M40 0 L80 15 V45 C80 75 40 100 40 100 C40 100 0 75 0 45 V15 Z" fill="url(#shieldGrad)" />
+    <path d="M40 20 L40 80 M20 40 L60 40 M25 60 L55 60" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="190" y="130" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="46" fill="#ffffff" letter-spacing="0.5">
+    Awesome Cloud Network Firewall
+  </text>
+  
+  <text x="190" y="175" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="20" fill="#94a3b8">
+    Curated List of Cloud Firewalls, Network Security Platforms &amp; Virtual Appliances
+  </text>
+
+  <!-- Category Pills / Badges in Foreground -->
+  <g transform="translate(190, 205)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="140" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="70" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="13" fill="#38bdf8" text-anchor="middle">☁️ SaaS &amp; Cloud</text>
+    
+    <!-- Pill 2 -->
+    <rect x="150" y="0" width="160" height="32" rx="16" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" />
+    <text x="230" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="13" fill="#818cf8" text-anchor="middle">🔓 Open-Source</text>
+    
+    <!-- Pill 3 -->
+    <rect x="320" y="0" width="170" height="32" rx="16" fill="#1e293b" stroke="#34d399" stroke-width="1.5" />
+    <text x="405" y="21" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="13" fill="#34d399" text-anchor="middle">🛡️ Virtual Appliances</text>
+  </g>
+</svg>
